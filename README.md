@@ -16,6 +16,8 @@ Our agent is a goal-based agent which aims to recommend hotels that aligns with 
 
 Describe how your agent is set up and where it fits in probabilistic modeling
 
+Our agent works by analyzing the training data then creating a CPT for each feature. The CPTs are then used to calculate the likelihood of a hotel being a good fit for a user based on their preference for price and rating. The agent then recommends the hotel with the highest likelihood.
+
 Our hotel recommendation agent uses the Naive Bayes classifier where the conditional probabilities are calculated to represent the likelihood of a recommendation given certain features. 
 
 We performed sentiment classification by categorizing the reviews as positive, neutral or negative baseed on the count of positive and negative words.
@@ -51,7 +53,7 @@ https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe
 
 Conclusion
 
-
+From our first iteration, we can see that our model has initial good fitting. As seen on the graph, our model is not over or underfit. However, we can make more improvements by taking into account the user's preferences such as size, budget range, etc.
 
 Our model achieved an accuracy of 93.21% which means our hotel recommendation system is performing well. There is room to improve in our model by incorporating more features that the user will consider such as including time of year to consider the season and by incorporating hotel amenities. 
 
