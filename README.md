@@ -42,12 +42,16 @@ The second way is by finding the best hotel based on price preference and inputt
 
 
 
+Our agent works by analyzing the training data then creating a CPT for each feature. The CPTs are then used to calculate the likelihood of a hotel being a good fit for a user based on their preference for price and rating. The agent then recommends the hotel with the highest likelihood.
+
 Our data
 https://www.kaggle.com/datasets/maelysboudier/hotel-prices-in-europe 
 https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe
 
 
 Conclusion
+
+
 
 Our model achieved an accuracy of 93.21% which means our hotel recommendation system is performing well. There is room to improve in our model by incorporating more features that the user will consider such as including time of year to consider the season and by incorporating hotel amenities. 
 
