@@ -22,4 +22,7 @@ https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe
 Train your first model
 Evaluate your model
 Create/Update your README.md to include your new work and updates you have all added. Make sure to upload all code and notebooks. Provide links in your README.md
+- [Notebook: Hotel Recommendation System](./worko.ipynb)
+
 Conclusion section: What is the conclusion of your 1st model? What can be done to possibly improve it?
+From our first iteration, we can see that our model has initial good fitting. As seen on the graph, our model is not over or underfit. However, we can make more improvements by taking into account the user's preferences such as size, budget, etc.
