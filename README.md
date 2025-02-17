@@ -1,5 +1,5 @@
 # Hotel Recommendation System
-### By: Akshat Jane, Ryan Wong, Eunice Cho
+### By: Akshat Jain, Ryan Wong, Eunice Cho
 
 Our project focuses on developing a hotel recommendation system using Naive Bayes. Our system will recommend hotels based on customer reviews and hotel attributes. We will also incorporate sentiment analysis on reviews. The goal of our model is to produce the best hotel option for the user.
 
