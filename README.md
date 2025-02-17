@@ -14,6 +14,8 @@ Our agent is a goal-based agent which aims to recommend hotels that aligns with 
 
 Describe how your agent is set up and where it fits in probabilistic modeling
 
+Our agent works by analyzing the training data then creating a CPT for each feature. The CPTs are then used to calculate the likelihood of a hotel being a good fit for a user based on their preference for price and rating. The agent then recommends the hotel with the highest likelihood.
+
 Our data
 https://www.kaggle.com/datasets/maelysboudier/hotel-prices-in-europe 
 https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe
