@@ -1,7 +1,7 @@
 # Hotel Recommendation System
 ### By: Akshat Jain, Ryan Wong, Eunice Cho
 
-Our project focuses on developing a hotel recommendation system using Naive Bayes. Our system will recommend hotels based on customer reviews and hotel attributes. We will also incorporate sentiment analysis on reviews. The goal of our model is to produce the best hotel option for the user.
+Our project focuses on developing a hotel recommendation system using Naive Bayes. Our system will recommend hotels based on customer reviews, price, and reviewer score. We will also incorporate sentiment analysis on reviews. The goal of our model is to produce the best hotel option for the user.
 
 Explain what your AI agent does in terms of PEAS. What is the "world" like? 
 
