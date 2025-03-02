@@ -3,6 +3,21 @@
 
 Our project implements a hotel recommendation system using Naive Bayes. Our system will recommend hotels based on customer reviews, price, and reviewer score. The goal of our model is to produce the best hotel option for the user.
 
+
+Bayesian Network:
+![Bayesian Network](BN_structure_fixed.png)
+
+## Model Accuracy & Overfitting Analysis  
+
+Our Bayesian Network model achieved an accuracy of **93.21%** when predicting hotel recommendations based on sentiment, reviewer score, and price.  
+
+The plot below illustrates how model complexity affects training and testing error. The green dot represents our model’s position, showing that it has low error. This means our model has a good balance between underfitting and overfitting.  
+
+![Model Complexity vs. Error](model_fitting.png)  
+
+A well-fitting model should have a small gap between training and testing error, avoiding both high bias (underfitting) and high variance (overfitting). Our model appears to generalize well, but further tuning could help optimize performance.  
+
+
 Explain what your AI agent does in terms of PEAS. What is the "world" like? 
 
 Our agent is a hotel recommendation system which aims to produce the best hotel option for the user. The performance measure will be user feedback on how they rate the hotel we recommend to them. The environment will be the device the user uses to interact with the model. The actuators are the hotels that our agent recommends to the users based on their hotel preferences and hotel reviews. The sensors will be the data we receive from users about how much they are willing to spend on a hotel as well as which type of hotel they would like to stay in.
@@ -21,6 +36,13 @@ Our agent works by analyzing the training data then creating a CPT for each feat
 Our hotel recommendation agent uses the Naive Bayes classifier where the conditional probabilities are calculated to represent the likelihood of a recommendation given certain features. 
 
 We performed sentiment classification by categorizing the reviews as positive, neutral or negative baseed on the count of positive and negative words.
+
+The sentiment of the hotel reviews was classified using the provided columns:
+
+Review_Total_Positive_Word_Counts: Total number of positive words in the positive review.
+Review_Total_Negative_Word_Counts: Total number of negative words in the negative review.
+
+Each hotel has a positive and negative review. There is a column of the counts of positive words in the positive review and a column of the counts of negative words in the negative review. The sentiment classification is done by comparing the number of positive words and negative words against each other. If the count of positive words is more than the count of negative words then we classify it as positive. If the count of negative words is more than the count of positive words than we classify the count as negative. Finally, if the count of positive words and negative words are equal to each other, then we classify it as neutral.
 
 Then we binned the reviewer score and price binning. The price category is in bins of affordable/expensive and the reviewer score is in bins of low/high.
 
