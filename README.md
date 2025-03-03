@@ -8,13 +8,16 @@ Bayesian Network:
 
 ![Bayesian Network](BN_structure.png)
 
+
 ## Model Accuracy & Overfitting Analysis  
 
 Our Bayesian Network model achieved an accuracy of **93.21%** when predicting hotel recommendations based on sentiment, reviewer score, and price.  
 
 The plot below illustrates how model complexity affects training and testing error. The green dot represents our model’s position, showing that it has low error. This means our model has a good balance between underfitting and overfitting.  
 
+
 ![Model Complexity vs. Error](accuracy.png)  
+
 
 A well-fitting model should have a small gap between training and testing error, avoiding both high bias (underfitting) and high variance (overfitting). Our model appears to generalize well, but further tuning could help optimize performance.  
 
