@@ -5,6 +5,7 @@ Our project implements a hotel recommendation system using Naive Bayes. Our syst
 
 
 Bayesian Network:
+
 ![Bayesian Network](BN_structure.png)
 
 ## Model Accuracy & Overfitting Analysis  
