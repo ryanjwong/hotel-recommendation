@@ -1,4 +1,125 @@
 # Hotel Recommendation System
+
+### By: Akshat Jain, Eunice Cho, Ryan Wong for CSE 150A Winter '25
+
+### Synopsis
+Our project revolves around a hotel recommendation system that is based on Naive Bayes, something we learned in this class. Our system will recommend hotels based on three main factors: customer reviews, price, and reviewer score. The end goal of this project is to provide a model that allows a user to receive a hotel recommendation that best fits their needs.
+
+## PEAS/Agent Analysis
+
+### Introduction
+After on our research on datasets and possible project ideas, we came to this idea of a hotel recommendation system, which provides a user with a hotel recommendation. As such, we designed a hotel recommendation system that provides a recommendation based on customer reviews, price, and reviewer scores.
+
+### Performance Measure, Environment, Actuators, Sensors (PEAS)
+- **Performance Measure**: The main performance measure is how the user feels about the provided hotel recommendations, which can be meausred by how well the recommended hotel aligns with the user's preferences.
+- **Environment**: The recommendation system is virtual, in a space where it can hypothetically be accessed by users on the internet.
+- **Actuators**: The recommendation system outputs hotel recommendations based on the results of naive bayes model, which is first fed the inputs.
+- **Sensors**: The model receives user input, being budget range, hotel preferences, and the scors of reviewers.
+
+### Type of Agent
+The agent is a **goal-based agent**, intending to provide hotel recommendations that align with user preferences. It utilizes **probabilistic reasoning through naive bayes**, which calculates the probability of a hotel being a good fit for a user, based on their preferences.
+
+## Agent Setup, Data Preprocessing, and Training
+
+### Dataset Exploration
+- **Dataset Overview**:
+  - TODO: add a disclaimer?? that our data is all from europe
+  - Here are the datasets that we used, both found on Kaggle.
+    - [Hotel Prices in Europe Dataset](https://www.kaggle.com/datasets/maelysboudier/hotel-prices-in-europe)
+    - [515K Hotel Reviews in Europe Dataset](https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe)
+  - The main data that can be found in these datasets are: 
+    - hotel names
+    - prices
+    - reviewer scores
+    - review sentiment data.
+- **Important Variables**:
+  - TODO: Explain variables further and also draw a picture to show the variables/to help visualise it
+  - `Review_Total_Positive_Word_Counts`: the count of positive words in reviews for a given hotel
+  - `Review_Total_Negative_Word_Counts`: the count of negative words in reviews for a given hotel
+  - `Reviewer Score`: the score given by a reviewer, out of 10, which is divided into two categories: low score (<=7) and high score (>7)
+  - `Price`: the price of the hodel, which is also divided into two categories: affordable and expensive
+  - `Hotel Recommendation Score`: calculated using sentiment score and reviewer score to create a binary output: recommended or not recommended
+- **Variable Interactions**:
+  - sentiment analysis to place into positive/negative/neutral category is found by comparing `Review_Total_Positive_Word_Counts` and `Review_Total_Negative_Word_Counts`
+  - Hotels are categorized into low/high score and also affordable/expensive
+  - The naive bayes model predicts whether a hotel should be recommended based on these engineered features
+
+<br><br>
+The following image depicts how the different factors influence the main hotel recommendation:
+
+![Bayesian Network](BN_structure.png)
+
+### Model Selection and Structure
+- **Model Choice**:
+  - TODO: need more of an explanation for why this model works, and why we chose it (since the main variables were assumed to be condtionally independent)
+  - We selected the **naive bayes classifier** for our model since it is good at prdicting probabilities given we have conditional independence assumptions
+- **Structure Explanation**:
+  - The model is uses **cpts** to calculate probabilities for features like sentiment, reviewer score (low/high), and price (affordable/expensive)
+
+### Parameter Estimation
+- TODO: need to better explain, with PHOTO/Code snippet, how we calculated the CPTs and why that is important
+- **Calculating Parameters**:
+  - The conditional probabilities were estimated using the **naive bayes formula**.
+  - We also used **laplace smoothing** to stop any issues regarding 0 probabilities
+- **Algorithms Used**:
+  - We used the naive bayes algorithm for classification
+  - Sentiment classification was performed by compaing the number of positive words and negative words
+- **Library Usage**:
+  - We used `numpy` for handling the arrays and probabilities
+  - We also used `pandas` for processing the data
+  - We also used `matplotlib.pyplot` for our graphs
+
+### Training Process
+- **Training Setup**:
+  - Training data was preprocessed by binning price and reviewer score into categories to engineer new features
+  - Conditional probabilities were then computed for each feature
+  - The model was trained using older hotel reviews and tested on unseen data
+- **Code Snippet or Notebook Link**:
+  - TODO: [code snippet] for main training and what it means
+  - TODO: link to notebook
+
+## Conclusion and Results
+
+### Performance Evaluation
+- **Results Summary**:
+  - Our bayesian network model achieved an accuracy of **93.21%** in predicting hotel recommendations (let's go!!!!!!!)
+- **Visualizations**:
+  - The graph below shows the relationship between model complexity and error
+
+![Model Complexity vs. Error](accuracy.png)
+
+### Interpretation of Results
+- **Performance Analysis**:
+  - Our model has a **low error rate**, indicating that it is able to successfully recommend a hotel
+  - It holds a good balance between **underfitting** and **overfitting**, as shown by the plot above
+- **Comparison to Baseline**:
+  - A random recommendation would achieve significantly lower accuracy, validating our approach.
+  - TODO: show the results of a random approach, since that would be our baseline
+  - TODO: maybe even do one where a human like us guesses hotel recommendations?? would be a cool thing to add to the final submission
+
+### Areas for Improvement
+- TODO: need more detail with this step, right now we just kinda stating stuf LOL
+- TODO: address that our data is from europe
+- **Data Preprocessing Enhancements**:
+  - Our sentiment analysis at the moment is very weak. We currently just compare the counts of positive/negative words in the reviews for a hotel. In reality, some words, positive or negative, might hold more weight than others. A potential improvement would be to use advanced NLP on the reviews, rather than using the counts of positive/negative reviews. This would however, require us to access the reviews and conduct expensive operations.
+- **Training Optimization**:
+  - We could add even more features regarding hotels. For example, location and season are important factors that could come into play.
+- **Model Adjustments**:
+  - We can change the **CPT structure** so that more user preferences can come into play. Ultimately, if this were a recommendation system we were releasing for people to use, it would be very important for there to be more user preferences. This necessarily would not improve the accuracy of our model, but it would allow the users to finepick the hotel recommendations they get.
+
+## References
+- TODO: add any other resources that we used
+- [Hotel Prices in Europe Dataset](https://www.kaggle.com/datasets/maelysboudier/hotel-prices-in-europe)
+- [515K Hotel Reviews in Europe Dataset](https://www.kaggle.com/datasets/jiashenliu/515k-hotel-reviews-data-in-europe)
+
+<br>
+
+---
+
+<br>
+
+# [IGNORE] Previous Milestone Submission
+## Hotel Recommendation System
 ### By: Akshat Jain, Ryan Wong, Eunice Cho
 
 Our project implements a hotel recommendation system using Naive Bayes. Our system will recommend hotels based on customer reviews, price, and reviewer score. The goal of our model is to produce the best hotel option for the user.
