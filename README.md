@@ -3,7 +3,7 @@
 ### By: Akshat Jain, Eunice Cho, Ryan Wong for CSE 150A Winter '25
 
 ### Synopsis  
-Our project is about using basketball player statistics with Hidden Markov Models (HMMs), specifically a Gaussian Hidden Marov Model. The model categorizes players into different performance states based on their playing stats over many seasons. The states we chose are starter, bench, and all start.
+Our project is about using basketball player statistics with Hidden Markov Models (HMMs), specifically a Gaussian Hidden Markov Model. The model categorizes players into different performance states based on their playing stats over many seasons. The states we chose are starter, bench, and all start.
 
 ## PEAS and Agent Analysis
 
