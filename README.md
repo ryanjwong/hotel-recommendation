@@ -117,4 +117,4 @@ Mike Dunleavy:
 - [hmmlearn Documentation](https://hmmlearn.readthedocs.io)  
 - [Pandas Library](https://pandas.pydata.org/)  
 - [Scikit-Learn](https://scikit-learn.org/)  
-
+- [ChatGPT](https://chatgpt.com/share/67d7c554-7874-8007-9156-383873ffb27b)
