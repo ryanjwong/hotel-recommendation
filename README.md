@@ -3,7 +3,7 @@
 ### By: Akshat Jain, Eunice Cho, Ryan Wong for CSE 150A Winter '25
 
 ### Synopsis  
-Our project is about using basketball player statistics with Hidden Markov Models (HMMs), specifically a Gaussian Hidden Marov Model. The model categorizes players into different performance states based on their playing stats over many seasons. The states we chose are starter, bench, and all start.
+Our project is about using basketball player statistics with Hidden Markov Models (HMMs), specifically a Gaussian Hidden Markov Model. The model categorizes players into different performance states based on their playing stats over many seasons. The states we chose are starter, bench, and all start.
 
 ## PEAS and Agent Analysis
 
@@ -59,6 +59,8 @@ The agent is goal-based, intending to provide a probabilistic classification of 
 ## Parameter Estimation  
 - Rookie, Bench, All Star
   - We chose these because they reflect common states for NBA players over time, with some staying in them for long periods of time, while others quickly moving around (i.e. an injury)
+  - We analyzed the average age of players in each hidden state and assigned the lowest average age as "Starter", the highest average age as "Bench", and the remaining middle age state as "All Star"
+  - This reflects typical career progression in the NBA where the younger players often start their careers as starters based on potential, then they reach their peak performance as All Stars, then they transition to bench roles as they age
 - The model uses a transition matrix to represent the probabilities of transitioning between each career state
   - Emission parameters were also estimated to determine the distribution of each feature for each state
   - The initial state distribution was also created to determine rthe probability of starting in each career state
