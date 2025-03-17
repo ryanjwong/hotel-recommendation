@@ -85,8 +85,8 @@ The agent is goal-based, intending to provide a probabilistic classification of 
 - Visualizations  
   - The graph below shows player state transitions over seasons.  
 
-### state distribution
-![State Distribution](state_dis.png)
+### HMM states
+![HMM States](hmm_states.png)
 
 ### Interpretation of Results  
 - Performance Analysis  
@@ -94,6 +94,10 @@ The agent is goal-based, intending to provide a probabilistic classification of 
   - Players tend to rapidly decline once they are an All Star or Starter and once they are Becnhed, stay there..
 - Comparison to Baseline  
   - A random classification would achieve significantly lower log-likelihood, confirming that our model learns meaningful states. 
+
+The Gaussian HMM is similar to the discrete HMM except it uses continuous observations using multivariate Gaussian distributions. Essentially, the emission probabilities uses each state’s observations with a normal Gaussian distributions instead of using categorical distributions which is what the discrete HMM does. 
+
+Our model accuracy is 39.54% which is better than random guessing which would be 33.3% accuracy for a three-state model. Our model learned some patterns but it doesn’t capture the all of the complexity in the player career trajectories. 
 
 ### Predictions for Certain Players:
 Eddie Johnson:
